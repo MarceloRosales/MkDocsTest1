@@ -1,0 +1,63 @@
+site_name: Test site
+site_url: https://example.com_or_my.github
+repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: squidfunk/mkdocs-material
+
+nav:
+  - Home: index.md
+  - New Nav Tab 1: NewNavTab1.md
+  - New Nav Tab 2: NewNavTab2.md
+
+theme: 
+#  name: readthedocs 
+  name: material
+  palette:
+    #primary: green # Color of the Header
+    #accent: red # Colors change on hover. 
+
+# https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color 
+
+    # Palette toggle for light mode
+    - primary: green  # The original was scheme: Default 
+      accent: red # Colors change on hover. 
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      accent: light green # Colors change on hover. 
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+        accent: red # Colors change on hover. 
+
+  logo: # assets/logo.png
+        assets/NiigataUicon.png
+  extra:
+    homepage: https://example.com # url for the logo icon
+
+
+  icon:
+    repo: fontawesome/brands/git-alt # repo icon
+
+  features:
+    - navigation.tabs # Places the navigation tabs at top level
+    - navigation.tabs.sticky #When sticky tabs are enabled, navigation tabs will lock below the header and always remain visible when scrolling down.
+    - navigation.sections # When sections are enabled, top-level sections are rendered as groups in the sidebar
+    # - toc.integrate # Not compatible with Navigation.indexes.  
+
+
+plugins:
+  - search # add search box.
+  - i18n: # language plugin. 
+      default_language: en
+      languages:
+        en: English
+        ja: 日本語
+        es: Español
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
