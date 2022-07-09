@@ -377,5 +377,18 @@ pip install mkdocs-material
 [Navigation]( https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion)  
 
 
+### Mkdocs Install MAC OS   
+brew --version  
+python --version  
+brew install python3   _# (not used)_    
+brew install python@3.10  
+pip --version  
+pip3 install --upgrade pip  
+pip3 install mkdocs  
+brew install mkdocs   _# (not use)_  
+pip3 install mkdocs-material  
+**Other Plugins:**   
+pip install mkdocs-static-i18n    _# (Internationalization plugin)_      
+pip install mkdocs-material   
 
 
