@@ -5,8 +5,8 @@ repo_name: squidfunk/mkdocs-material
 
 nav:
   - Home: index.md
-  - New Nav Tab 1: NewNavTab1.md
-  - New Nav Tab 2: NewNavTab2.md
+  - VS_Code: VS_Code.md
+  - MkDocs: MkDocs.md
 
 theme: 
 #  name: readthedocs 

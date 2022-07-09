@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://example.com_or_my.github/NewNavTab1/</loc>
+         <loc>https://example.com_or_my.github/MkDocs/</loc>
          <lastmod>2022-07-09</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/NewNavTab1/"/>
-         <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/NewNavTab1/"/>
-         <xhtml:link rel="alternate" hreflang="es" href="https://example.com_or_my.github/es/NewNavTab1/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/MkDocs/"/>
+         <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/MkDocs/"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://example.com_or_my.github/es/MkDocs/"/>
          
     </url>
     <url>
-         <loc>https://example.com_or_my.github/NewNavTab2/</loc>
+         <loc>https://example.com_or_my.github/VS_Code/</loc>
          <lastmod>2022-07-09</lastmod>
          <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/NewNavTab2/"/>
-         <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/NewNavTab2/"/>
-         <xhtml:link rel="alternate" hreflang="es" href="https://example.com_or_my.github/es/NewNavTab2/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/VS_Code/"/>
+         <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/VS_Code/"/>
+         <xhtml:link rel="alternate" hreflang="es" href="https://example.com_or_my.github/es/VS_Code/"/>
          
     </url>
     <url>
