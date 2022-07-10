@@ -491,6 +491,19 @@
     Mkdocs Install MAC OS
   </a>
   
+    <nav class="md-nav" aria-label="Mkdocs Install MAC OS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comments-in-markdown" class="md-nav__link">
+    Comments in Markdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -643,6 +656,19 @@
     Mkdocs Install MAC OS
   </a>
   
+    <nav class="md-nav" aria-label="Mkdocs Install MAC OS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comments-in-markdown" class="md-nav__link">
+    Comments in Markdown
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -692,10 +718,12 @@ The MkDocs Developer Guide provides documentation for users of MkDocs. See Getti
 <p><a href="https://suedbroecker.net/2021/01/25/how-to-install-mkdocs-on-mac-and-setup-the-integration-to-github-pages/">HOW TO INSTALL MKDOCS ON MAC AND SETUP THE INTEGRATION TO GITHUB PAGES</a>  January 25, 2021  </p>
 <p>Summary:<br />
 LOCAL SETUP ON MAC OS<br />
-- brew  <code>brew --version</code>; 
-- Python 3  <code>python --version</code>; find&amp;install <code>brew list &lt;formula1&gt; || brew install &lt;formula1&gt;</code>; <code>brew install python3</code>; <strong><code>brew install python@3.10</code></strong><br />
-- Pip  : <code>pip --version</code>; <code>pip3 install --upgrade pip</code><br />
-- MkDocs  : <code>pip3 install mkdocs</code>  (I used this install as described in guide); option: <code>brew install mkdocs</code> (error)<br />
+- brew  <code>brew --version</code>; <br />
+- Python 3  <code>python --version</code>; find&amp;install <code>brew list &lt;formula1&gt; || brew  
+- install &lt;formula1&gt;</code>; <code>brew install python3</code>; <strong><code>brew install python@3.10</code></strong>  <br />
+- Pip  : <code>pip --version</code>; <code>pip3 install --upgrade pip</code>  <br />
+- MkDocs  : <code>pip3 install mkdocs</code>  (I used this install as described in guide<br />
+- option: <code>brew install mkdocs</code> (error)<br />
 - MkDocs Material Extensions  : <code>pip3 install mkdocs-material</code><br />
 Other Plugins:<br />
 - <a href="https://github.com/ultrabug/mkdocs-static-i18n">i18n</a>:  <code>pip install mkdocs-static-i18n</code>;<br />
@@ -976,6 +1004,30 @@ pip3 install mkdocs-material<br />
 <strong>Other Plugins:</strong> <br />
 pip install mkdocs-static-i18n    <em># (Internationalization plugin)</em>    <br />
 pip install mkdocs-material   </p>
+<h4 id="comments-in-markdown">Comments in Markdown</h4>
+<p>If you want a comment that is strictly for yourself (readers of the converted document should not be able to see it, even with "view source") you could (ab)use the link labels (for use with reference style links) that are available in the core Markdown specification:<br />
+http://daringfireball.net/projects/markdown/syntax#link<br />
+That is:  </p>
+<pre><code>[comment]: &lt;&gt; (This is a comment, it will not be included)
+[comment]: &lt;&gt; (in  the output file unless you use it in)
+[comment]: &lt;&gt; (a reference style link.)
+</code></pre>
+<p>Or you could go further:  </p>
+<pre><code>[//]: &lt;&gt; (This is also a comment.)
+</code></pre>
+<p>To improve platform compatibility (and to save one keystroke) it is also possible to use # (which is a legitimate hyperlink target) instead of &lt;&gt;:  </p>
+<pre><code>[//]: # (This may be the most platform independent comment)
+</code></pre>
+<p>For maximum portability it is important to insert a blank line before and after this type of comments, because some Markdown parsers do not work correctly when definitions brush up against regular text. The most recent research with Babelmark shows that blank lines before and after are both important. Some parsers will output the comment if there is no blank line before, and some parsers will exclude the following line if there is no blank line after.<br />
+In general, this approach should work with most Markdown parsers, since it's part of the core specification. (even if the behavior when multiple links are defined, or when a link is defined but never used, is not strictly specified).  </p>
+<p>Placing a comment between <code>&lt;&gt;</code> will make it a comment and invisible in a markdown document. Ex. <strong><em>_</em></strong> <this is a comment> (there is a comment here)    </p>
+<p>This is an example 1 [comment]: <here is the comment> (This is a comment, it will not be included)<br />
+This is an example 2 [//]: &lt;&gt; (This is also a comment.)<br />
+This is an example 3 [//]: # (This may be the most platform independent comment)  </p>
+<p>Comments Examples: (3):  <br />
+[comment]: <here is the comment> (This is a comment, it will not be included)<br />
+ [//]: <Here is another comment> (This is also a comment.)<br />
+[//]: #This is the comment (This may be the most platform independent comment) <strong>this type of comment does not seems to be working)</strong>    </p>
 
               
             </article>

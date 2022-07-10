@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>https://example.com_or_my.github/MkDocs/</loc>
-         <lastmod>2022-07-09</lastmod>
+         <lastmod>2022-07-10</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/MkDocs/"/>
          <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/MkDocs/"/>
@@ -11,7 +11,7 @@
     </url>
     <url>
          <loc>https://example.com_or_my.github/VS_Code/</loc>
-         <lastmod>2022-07-09</lastmod>
+         <lastmod>2022-07-10</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/VS_Code/"/>
          <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/VS_Code/"/>
@@ -20,7 +20,7 @@
     </url>
     <url>
          <loc>https://example.com_or_my.github/</loc>
-         <lastmod>2022-07-09</lastmod>
+         <lastmod>2022-07-10</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://example.com_or_my.github/en/"/>
          <xhtml:link rel="alternate" hreflang="ja" href="https://example.com_or_my.github/ja/"/>

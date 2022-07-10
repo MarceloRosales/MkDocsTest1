@@ -35,10 +35,12 @@ The MkDocs Developer Guide provides documentation for users of MkDocs. See Getti
 
 Summary:  
 LOCAL SETUP ON MAC OS  
-- brew  `brew --version`; 
-- Python 3  `python --version`; find&install `brew list <formula1> || brew install <formula1>`; `brew install python3`; **`brew install python@3.10`**  
-- Pip  : `pip --version`; `pip3 install --upgrade pip`  
-- MkDocs  : `pip3 install mkdocs`  (I used this install as described in guide); option: `brew install mkdocs` (error)  
+- brew  `brew --version`;   
+- Python 3  `python --version`; find&install `brew list <formula1> || brew  
+- install <formula1>`; `brew install python3`; **`brew install python@3.10`**    
+- Pip  : `pip --version`; `pip3 install --upgrade pip`    
+- MkDocs  : `pip3 install mkdocs`  (I used this install as described in guide  
+- option: `brew install mkdocs` (error)  
 - MkDocs Material Extensions  : `pip3 install mkdocs-material`  
 Other Plugins:  
 - [i18n]( https://github.com/ultrabug/mkdocs-static-i18n):  ` pip install mkdocs-static-i18n`;  
@@ -390,5 +392,39 @@ pip3 install mkdocs-material
 **Other Plugins:**   
 pip install mkdocs-static-i18n    _# (Internationalization plugin)_      
 pip install mkdocs-material   
+
+
+#### Comments in Markdown  
+
+If you want a comment that is strictly for yourself (readers of the converted document should not be able to see it, even with "view source") you could (ab)use the link labels (for use with reference style links) that are available in the core Markdown specification:  
+http://daringfireball.net/projects/markdown/syntax#link  
+That is:  
+```
+[comment]: <> (This is a comment, it will not be included)
+[comment]: <> (in  the output file unless you use it in)
+[comment]: <> (a reference style link.)
+```
+
+Or you could go further:  
+```
+[//]: <> (This is also a comment.)
+```
+To improve platform compatibility (and to save one keystroke) it is also possible to use # (which is a legitimate hyperlink target) instead of <>:  
+```
+[//]: # (This may be the most platform independent comment)
+```
+For maximum portability it is important to insert a blank line before and after this type of comments, because some Markdown parsers do not work correctly when definitions brush up against regular text. The most recent research with Babelmark shows that blank lines before and after are both important. Some parsers will output the comment if there is no blank line before, and some parsers will exclude the following line if there is no blank line after.  
+In general, this approach should work with most Markdown parsers, since it's part of the core specification. (even if the behavior when multiple links are defined, or when a link is defined but never used, is not strictly specified).  
+
+Placing a comment between `<>` will make it a comment and invisible in a markdown document. Ex. _______ <this is a comment> (there is a comment here)    
+
+This is an example 1 [comment]: <here is the comment> (This is a comment, it will not be included)  
+This is an example 2 [//]: <> (This is also a comment.)  
+This is an example 3 [//]: # (This may be the most platform independent comment)  
+
+Comments Examples: (3):    
+[comment]: <here is the comment> (This is a comment, it will not be included)  
+ [//]: <Here is another comment> (This is also a comment.)  
+[//]: #This is the comment (This may be the most platform independent comment) **this type of comment does not seems to be working)**    
 
 
